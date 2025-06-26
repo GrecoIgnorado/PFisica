@@ -1,0 +1,201 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 24 jun. 2025, 14:30:43
+    Author     : Gigabyte
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+.header{
+    background-color: rgb(102,28,61);
+    color: white;
+    padding: 20px 25px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;    
+    align-items: center
+}
+.header h1 {
+    margin: 0;
+    text-align: center;
+}
+.sidebar {
+    background-color: #f4f4f4;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 200px;
+    height: calc(100% - 90px);
+    padding: 20px 0;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgb(102, 28, 61);
+    border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgb(82, 18, 41);
+}
+.content {
+    margin-left: 220px;
+    margin-top: 40px;
+    padding: 20px;
+    overflow-y: auto;
+}
+.menu-category {
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.menu-category:hover {
+    background-color: #e9ecef;
+    border-left: 4px solid rgb(102, 29, 62);
+}
+.submenu {
+    padding-left: 20px;
+    display: none;
+}
+.menu-category .arrow, .submenu-category .arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.submenu-category {
+    padding: 8px 15px 8px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid transparent;
+}
+.submenu-category:hover {
+    background-color: #e9ecef;
+    border-left: 3px solid #6c757d;
+}
+.menu-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.menu-item:hover {
+    background-color: #e9ecef;
+    border-left: 2px solid #adb5bd;
+}
+.menu-item.active {
+    background-color: #4CAF50;
+    color: white;
+    border-left: 2px solid #198754;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+.arrow {
+    transition: transform 0.3s;
+}
+.arrow.rotated {
+    transform: rotate(90deg);
+}
+.simulator-container {
+    max-width: 600px;
+    margin: 10px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.simulator-container input,
+.simulator-container button {
+    margin: 8px 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+#physiscsCanvas {
+    background: #fff;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.param-control {
+    padding: 10px 15px 10px 40px;
+    background-color: #f1f3f5;
+    display: none;
+}
+.param-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #495057;
+}
+.param-control input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.physics-result {
+    background-color: #e7f5ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+input, button {
+  margin: 8px 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+canvas {
+  background: #fff;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+#resultados {
+  text-align: left;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+     .sidebar {
+        width: 160px;
+      }
+  .content {
+        margin-left: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
